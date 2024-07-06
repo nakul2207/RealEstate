@@ -5,6 +5,7 @@ import axios from "axios";
 import { env } from "process";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast"
+import { contact } from "../actions/contact";
 
 
 const ContactUs = () => {
@@ -15,8 +16,9 @@ const ContactUs = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/contactus";
-        axios.post(url, { name, email, message });
+        // const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/contactus";
+        // axios.post(url, { name, email, message });
+        contact(name, email, message);
         toast({
             description: "Thank you for contacting us! We'll get back to you soon.",
           });
