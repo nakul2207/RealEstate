@@ -29,6 +29,7 @@ export function PredictionForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [prediction, setPrediction] = useState<number>(0)
+  const SERVER_URL = process.env.SERVER_URL;
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -39,7 +40,7 @@ export function PredictionForm() {
     const formData = new FormData(event.currentTarget)
     
     try {
-      const {data} = await axios.post('http://127.0.0.1:5000/predict_home_price', formData, {
+      const {data} = await axios.post(`${SERVER_URL}/predict_home_price`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
