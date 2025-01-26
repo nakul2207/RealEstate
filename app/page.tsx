@@ -19,7 +19,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-          <h1 className="text-7xl font-bold">Surya Real Estate</h1>
+          <h1 className="text-7xl font-bold">FutureNest</h1>
           <p className="text-lg">Find Your Dream Home</p>
         </div>
       </div>
@@ -27,7 +27,6 @@ export default function Home() {
       <CustomCarousal />
       <Section />
       <ServicesSection />
-
     </div>
   );
 }

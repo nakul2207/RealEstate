@@ -11,8 +11,8 @@ export const Nav = () => {
           <Link href="/" className="text-white hover:text-white cursor-pointer relative">
             <span className="custom-hover">Home</span>
           </Link>
-          <Link href="#" className="text-white hover:text-white cursor-pointer relative">
-            <span className="custom-hover">Gallery</span>
+          <Link href="/Price" className="text-white hover:text-white cursor-pointer relative">
+            <span className="custom-hover">Pricing</span>
           </Link>
           <Link href="/Aboutus" className="text-white hover:text-white cursor-pointer relative">
             <span className="custom-hover">About us</span>
