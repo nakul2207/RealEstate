@@ -29,7 +29,7 @@ export function PredictionForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [prediction, setPrediction] = useState<number>(0)
-  const SERVER_URL = process.env.SERVER_URL;
+  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
