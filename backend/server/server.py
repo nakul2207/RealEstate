@@ -26,6 +26,10 @@ def predict_home_price():
     })
     return response
 
+@app.route('/')
+def home():
+    return "Welcome to the Real Estate Prediction API!"
+
 if __name__ == "__main__":
     print("Python server running")
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
